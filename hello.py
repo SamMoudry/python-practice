@@ -1,19 +1,28 @@
-print("Hello World")
-x = 5
-print(x)
-weapons = ['sword', 'gun', 'knife']
-print(weapons)
-class Person:
-    def __init__(self, name, age):
-        self.name = name
-        self.age = age
+from flask import Flask
 
-Sam = Person('Sam', 21)
+app = Flask(__name__)
 
-print(Sam.name, Sam.age)
+@app.route("/")
+def hello_world():
+    return "<p>Hello, World!</p>"
 
-def addNumbers(num1, num2):
-    print(num1 + num2)
 
-addNumbers(1, 2)
-addNumbers(5, 5)
+# print("Hello World")
+# x = 5
+# print(x)
+# weapons = ['sword', 'gun', 'knife']
+# print(weapons)
+# class Person:
+#     def __init__(self, name, age):
+#         self.name = name
+#         self.age = age
+
+# Sam = Person('Sam', 21)
+
+# print(Sam.name, Sam.age)
+
+# def addNumbers(num1, num2):
+#     print(num1 + num2)
+
+# addNumbers(1, 2)
+# addNumbers(5, 5)
